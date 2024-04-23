@@ -204,10 +204,16 @@ function toggleModal(show, modal = elements.modalWindow) {
  * **********************************************************************************************************************************************/
 
 function addTask(event) {
-  event.preventDefault();
+  event.preventDefault(); //prevents default form submission
 
   //Assign user input to the task object
-  const task = {};
+  const task = {
+    id: generateUiqueId(),
+    title:  document.getElementById("title-input").value,
+    description: document.getElementById("desc-input").value,
+    status: document.getElementById("select-status").value,
+    board: activeBoard  //if you're using board-based task management
+  };
   const newTask = createNewTask(task);
   if (newTask) {
     addTaskToUI(newTask);
@@ -218,7 +224,29 @@ function addTask(event) {
   }
 }
 
-function toggleSidebar(show) {}
+function toggleSidebar(show) {
+  const sidebar = document.getElementById("side-bar-div");
+  const mainContent = document.getElementById("layout");
+
+  if (show) {
+    sidebar.style.display = "block";
+    mainContent.classList.remove("expanded");
+  } else {
+    sidebar.style.display = "none";
+    mainContent.classList.add("expanded");
+  }
+}
+
+function toggleTheme() {
+  const isLightTheme = document.body.classList.toggle("light-theme");
+  localStorage.setItem("light-theme", isLightTheme ? "enabled" : "disabled");
+}
+
+function openEditTaskModal(task) {
+  // Set task details in modal inputs
+const editTaskForm = document.getElementById("edit-task-form");
+  // Get button elements from the task modal
+}
 
 function toggleTheme() {}
 
