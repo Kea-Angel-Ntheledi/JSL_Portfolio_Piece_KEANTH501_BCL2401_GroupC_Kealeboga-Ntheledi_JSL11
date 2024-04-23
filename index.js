@@ -76,7 +76,6 @@ function filterAndDisplayTasksByBoard(boardName) {
 }
 
 // Ensure the column titles are set outside of this function or correctly initialized before this function runs
-//!!!!!!!!!!!!!!!check!!!!!!!!!!!!!!!!!!!!!!!!!!
 elements.columnDivs.forEach((column) => {
   const status = column.getAttribute("data-status");
   // Reset column content while preserving the column title
@@ -146,18 +145,21 @@ function addTaskToUI(task) {
 
   tasksContainer.appendChild(taskElement);
 }
-//CHECK OUT!!!!!!!!
+
 function setupEventListeners() {
   // Cancel editing task event listener
   const cancelEditBtn = document.getElementById("cancel-edit-btn");
-  cancelEditBtn.click();
-  toggleModal(false, elements.editTaskModal);
+  cancelEditBtn.addEventListener("click", () => {
+    toggleModal(false, elements.editTaskModal);
+    elements.filterDiv.style.display = "none";
+  });
 
   // Cancel adding new task event listener
   const cancelAddTaskBtn = document.getElementById("cancel-add-task-btn");
+  // Set up a click event listener to handle canceling the modal
   cancelAddTaskBtn.addEventListener("click", () => {
-    toggleModal(false);
-    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+    toggleModal(false); //hides the modal
+    elements.filterDiv.style.display = "none"; // Also hide the background overlay
   });
 
   // Clicking outside the modal to close it
@@ -190,6 +192,10 @@ function setupEventListeners() {
 // Toggles tasks modal
 // Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
+  if (!modal) {
+    console.error("Modal not found");
+    return;
+  }
   modal.style.display = show ? "block" : "none";
 }
 
