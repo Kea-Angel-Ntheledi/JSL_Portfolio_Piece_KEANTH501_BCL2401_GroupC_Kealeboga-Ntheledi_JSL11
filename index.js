@@ -147,7 +147,7 @@ function addTaskToUI(task) {
 
   tasksContainer.appendChild(taskElement);
 }
-//CHECK OUT!!!!!!!!1111111
+//CHECK OUT!!!!!!!!
 function setupEventListeners() {
   // Cancel editing task event listener
   const cancelEditBtn = document.getElementById("cancel-edit-btn");
@@ -219,7 +219,7 @@ function toggleTheme() {}
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-
+const editTaskForm = document.getElementById("edit-task-form");
   // Get button elements from the task modal
 
   // Call saveTaskChanges upon click of Save Changes button
