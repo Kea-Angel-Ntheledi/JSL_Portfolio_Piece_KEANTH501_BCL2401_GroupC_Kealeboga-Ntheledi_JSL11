@@ -77,7 +77,7 @@ function filterAndDisplayTasksByBoard(boardName) {
 }
 
 // Ensure the column titles are set outside of this function or correctly initialized before this function runs
-
+//!!!!!!!!!!!!!!!check!!!!!!!!!!!!!!!!!!!!!!!!!!
 elements.columnDivs.forEach((column) => {
   const status = column.getAttribute("data-status");
   // Reset column content while preserving the column title
@@ -90,8 +90,8 @@ elements.columnDivs.forEach((column) => {
   column.appendChild(tasksContainer);
 
   filteredTasks
-    .filter((task) => (task.status = status))
-    .forEach((task) => {
+    .filter(task => task.status === status)
+    .forEach(task => {
       const taskElement = document.createElement("div");
       taskElement.classList.add("task-div");
       taskElement.textContent = task.title;
