@@ -18,7 +18,15 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
-
+  sidebar: document.getElementById('side-bar-div'),
+  hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
+  showSideBarBtn: document.getElementById('show-side-bar-btn'),
+  themeToggleCheckbox: document.getElementById('switch'),
+  headerBoardName: document.getElementById('header-board-name'),
+  createNewTaskBtn: document.getElementById('add-new-task-btn'),
+  editTaskModal: document.querySelector('.edit-task-modal-window'),
+  modalWindow: document.getElementById('new-task-modal-window'),
+  filterDiv: ducument.getElementById('filterDiv')
 }
 
 let activeBoard = "";
