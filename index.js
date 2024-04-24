@@ -21,6 +21,7 @@ function initializeData() {
     console.log("Data already exists in localStorage");
   }
 }
+initialData();
 
 // TASK: Get elements from the DOM
 const elements = {
