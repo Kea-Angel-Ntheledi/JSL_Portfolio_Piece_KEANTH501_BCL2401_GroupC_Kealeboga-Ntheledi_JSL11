@@ -240,11 +240,11 @@ function addTask(event) {
 
   //Assign user input to the task object
   const task = {
-    id: generateUiqueId(),
-    title:  document.getElementById("title-input").value,
-    description: document.getElementById("desc-input").value,
-    status: document.getElementById("select-status").value,
-    board: activeBoard  //if you're using board-based task management
+    board: activeBoard,
+    description: elements.descriptionInput.value,
+    id: localStorage.getItem("id"),
+    status: elements.selectStatus.value,
+    title: elements.titleInput.value,
   };
   const newTask = createNewTask(task);
   if (newTask) {
