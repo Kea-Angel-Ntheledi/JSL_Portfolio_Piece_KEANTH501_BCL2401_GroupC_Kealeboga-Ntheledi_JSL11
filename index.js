@@ -25,16 +25,14 @@ initializeData();
 
 // TASK: Get elements from the DOM
 const elements = {
-  sidebar: document.getElementById("side-bar-div"),
+  // Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle.
+  boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
+  themeSwitch: document.getElementById("switch"),
   hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
-  themeToggleCheckbox: document.getElementById("switch"),
-  headerBoardName: document.getElementById("header-board-name"),
-  createNewTaskBtn: document.getElementById("add-new-task-btn"),
-  editTaskModal: document.querySelector(".edit-task-modal-window"),
-  modalWindow: document.getElementById("new-task-modal-window"),
-  filterDiv: ducument.getElementById("filterDiv"),
-};
+  sideBar: document.querySelector(".side-bar"),
+  sideBarBottom: document.querySelector(".side-bar-bottom"),
+
 
 let activeBoard = "";
 
