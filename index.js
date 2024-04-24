@@ -282,12 +282,14 @@ function toggleTheme() {
 document.getElementById("boards-nav-links-div").style.marginTop = "50px";
 document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
 
-
 function openEditTaskModal(task) {
   // Set task details in modal inputs
 const editTaskForm = document.getElementById("edit-task-form");
-
+  function openEditTaskModal(task) {
   // Get button elements from the task modal
+  elements.editTaskTitleInput.value = task.title;
+  elements.editSelectStatus.value = task.status;
+  elements.editTaskDescInput.value = task.description;
 
   // Call saveTaskChanges upon click of Save Changes button
 
