@@ -38,7 +38,8 @@ const elements = {
   createNewTaskBtn: document.getElementById("add-new-task-btn"),
   deleteBoardBtn: document.getElementById("deleteBoardBtn"),
   editBoardBtn: document.getElementById("edit-board-btn"),
-  
+
+  columnDivs: document.querySelectorAll(",column-div"),
 
 let activeBoard = "";
 
