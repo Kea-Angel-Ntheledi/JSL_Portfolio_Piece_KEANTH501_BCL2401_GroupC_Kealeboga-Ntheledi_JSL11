@@ -279,6 +279,10 @@ function toggleTheme() {
   }
 }
 
+document.getElementById("boards-nav-links-div").style.marginTop = "50px";
+document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
+
+
 function openEditTaskModal(task) {
   // Set task details in modal inputs
 const editTaskForm = document.getElementById("edit-task-form");
