@@ -58,11 +58,11 @@ const elements = {
   cancelEditBtn: document.getElementById("cancel-edit-btn"),
   deleteTaskBtn: document.getElementById("delete-task-btn"),
 
-//filter div
-filterDiv: document.getElementById("filterDiv"),
-}
+  //filter div
+  filterDiv: document.getElementById("filterDiv"),
+  };
 
-  let activeBoard = "";
+let activeBoard = "";
 
 // Extracts unique board names from tasks
 // TASK: FIX BUGS
