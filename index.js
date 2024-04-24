@@ -200,12 +200,6 @@ function setupEventListeners() {
     toggleModal(false);
     elements.filterDiv.style.display = "none"; // Also hide the filter overlay
   });
-  // Set up a click event listener to handle canceling the modal
-  cancelAddTaskBtn.addEventListener("click", () => {
-    toggleModal(false); //hides the modal
-    elements.filterDiv.style.display = "none"; // Also hide the background overlay
-  });
-
   // Clicking outside the modal to close it
   elements.filterDiv.addEventListener("click", () => {
     toggleModal(false);
