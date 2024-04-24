@@ -139,12 +139,13 @@ elements.columnDivs.forEach((column) => {
       taskElement.setAttribute("data-task-id", task.id);
 
       // Listen for a click event on each task and open a modal
-      taskElement.addEventListener('click', () => {
+      taskElement.onclick = () => {
          openEditTaskModal(task);
-      });
+      };
       tasksContainer.appendChild(taskElement);
     });
 });
+}
 
 function refreshTasksUI() {
   filterAndDisplayTasksByBoard(activeBoard);
