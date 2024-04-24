@@ -32,15 +32,17 @@ const elements = {
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   sideBar: document.querySelector(".side-bar"),
   sideBarBottom: document.querySelector(".side-bar-bottom"),
-
+  // Main Layout: Header with board title, add task button, and main content area for task columns.
   headerBoardName: document.getElementById("header-board-name"),
   dropDownBtn: document.getElementById("dropdownBtn"),
   createNewTaskBtn: document.getElementById("add-new-task-btn"),
   deleteBoardBtn: document.getElementById("deleteBoardBtn"),
   editBoardBtn: document.getElementById("edit-board-btn"),
 
+  // Task Columns: Display tasks grouped by status (TODO, DOING, DONE).
   columnDivs: document.querySelectorAll(".column-div"),
 
+  // New Task Modal: Form for creating a new task.
   modalWindow: document.getElementById("new-task-modal-window"),
   titleInput: document.getElementById("title-input"),
   descriptionInput: document.getElementById("desc-input"),
@@ -48,6 +50,7 @@ const elements = {
   createTaskBtn: document.getElementById("create-task-btn"),
   cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
 
+  // Edit Task Modal: Form for editing an existing task's details.
   editTaskModal: document.querySelector(".edit-task-modal-window"),
   editTaskForm: document.getElementById("edit-task-form"),
   editTaskTitleInput: document.getElementById("edit-task-title-input"),
@@ -60,7 +63,7 @@ const elements = {
 
   //Filter div
   filterDiv: document.getElementById("filterDiv"),
-  };
+};
 
 let activeBoard = "";
 
