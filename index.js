@@ -1,7 +1,7 @@
 // TASK: import helper functions from utils
 // TASK: import initialData
 import {
-  getTask,
+  getTasks,
   createNewTask,
   patchTask,
   putTask,
@@ -293,7 +293,6 @@ document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
       saveTaskChanges(task.id);
       toggleModal(false, elements.editTaskModal);
       refreshTasksUI();
-    }
   };
 
   // Delete task using a helper function and close the task modal
@@ -307,7 +306,7 @@ document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
   };
 
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
-
+}
 
 function saveTaskChanges(taskId) {
   // Create an object with the updated task details
