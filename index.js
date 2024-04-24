@@ -207,9 +207,9 @@ function setupEventListeners() {
   });
 
   // Show sidebar event listener
- elements.hideSideBarBtn.addEventListener("click", () => {
-   toggleSidebar(false);
- });
+  elements.hideSideBarBtn.onclick = () => toggleSidebar(false);
+  elements.showSideBarBtn.onclick = () => toggleSidebar(true);
+
 
  elements.showSideBarBtn.addEventListener("click", () => {
    toggleSidebar(true);
