@@ -41,7 +41,15 @@ const elements = {
 
   columnDivs: document.querySelectorAll(",column-div"),
 
-let activeBoard = "";
+  modalWindow: document.getElementById("new-task-modal-window"),
+  titleInput: document.getElementById("title-input"),
+  descriptionInput: document.getElementById("desc-input"),
+  selectStatus: document.getElementById("select-status"),
+  createTaskBtn: document.getElementById("create-task-btn"),
+  cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
+
+
+  let activeBoard = "";
 
 // Extracts unique board names from tasks
 // TASK: FIX BUGS
