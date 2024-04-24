@@ -210,17 +210,12 @@ function setupEventListeners() {
   elements.hideSideBarBtn.onclick = () => toggleSidebar(false);
   elements.showSideBarBtn.onclick = () => toggleSidebar(true);
 
-
- elements.showSideBarBtn.addEventListener("click", () => {
-   toggleSidebar(true);
- });
-
   // Theme switch event listener
   elements.themeSwitch.addEventListener("change", toggleTheme);
 
   // Show Add New Task Modal event listener
   elements.createNewTaskBtn.addEventListener("click", () => {
-    toggleModal(true, elements.modalWindowlWindow);
+    toggleModal(true);
     elements.filterDiv.style.display = "block"; // Also show the filter overlay
   });
 
