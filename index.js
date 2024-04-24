@@ -263,7 +263,21 @@ function toggleSidebar(show) {
   localStorage.setItem("showSideBar", show);
 }
 
-function toggleTheme() {}
+function toggleTheme() {
+  const isLightTheme = document.body.classList.contains("light-theme");
+  document.body.classList.toggle("light-theme");
+  const logo = document.getElementById("logo");
+
+  if (isLightTheme) {
+    logo.src = "./assets/logo-dark.svg";
+    localStorage.setItem("logo", "./assets/logo-dark.svg");
+    localStorage.setItem("light-theme", "disabled");
+  } else {
+    logo.src = "./assets/logo-light.svg";
+    localStorage.setItem("logo", "./assets/logo-light.svg");
+    localStorage.setItem("light-theme", "enabled");
+  }
+}
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
