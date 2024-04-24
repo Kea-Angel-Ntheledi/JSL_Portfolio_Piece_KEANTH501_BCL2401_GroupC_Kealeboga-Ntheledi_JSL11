@@ -1,6 +1,13 @@
 // TASK: import helper functions from utils
 // TASK: import initialData
-
+import {
+  getTask,
+  createNewTask,
+  patchTask,
+  putTask,
+  deleteTask,
+} from "./utils/taskFunctions.js";
+import { initialData } from "./initialData";
 /*************************************************************************************************************************************************
  * FIX BUGS!!!
  * **********************************************************************************************************************************************/
@@ -169,17 +176,20 @@ function setupEventListeners() {
   });
 
   // Show sidebar event listener
-  elements.hideSideBarBtn.click();
-  toggleSidebar(false);
-  elements.showSideBarBtn.click();
-  toggleSidebar(true);
+ elements.hideSideBarBtn.addEventListener("click", () => {
+   toggleSidebar(false);
+ });
+
+ elements.showSideBarBtn.addEventListener("click", () => {
+   toggleSidebar(true);
+ });
 
   // Theme switch event listener
   elements.themeSwitch.addEventListener("change", toggleTheme);
 
   // Show Add New Task Modal event listener
   elements.createNewTaskBtn.addEventListener("click", () => {
-    toggleModal(true);
+    toggleModal(true, elements.modalWindowlWindow);
     elements.filterDiv.style.display = "block"; // Also show the filter overlay
   });
 
@@ -244,9 +254,16 @@ function toggleTheme() {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-const editTaskForm = document.getElementById("edit-task-form");
   // Get button elements from the task modal
-}
+   function styleActiveBoard(boardName) {
+    document.querySelectorAll('.board-btn').forEach(btn => {
+      if (btn.textContent === boardName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
 
 function toggleTheme() {}
 
@@ -272,7 +289,9 @@ function saveTaskChanges(taskId) {
 
   // Close the modal and refresh the UI to reflect the changes
 
-  refreshTasksUI();
+ function refreshTasksUI() {
+  filterAndDisplayTasksByBoard(activeBoard);
+ }
 }
 
 /*************************************************************************************************************************************************/
