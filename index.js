@@ -257,35 +257,11 @@ function addTask(event) {
 }
 
 function toggleSidebar(show) {
-  const sidebar = document.getElementById("side-bar-div");
-  const mainContent = document.getElementById("layout");
+  elements.sideBar.style.display = show ? "block" : "none";
+  elements.showSideBarBtn.style.display = show ? "none" : "block";
 
-  if (show) {
-    sidebar.style.display = "block";
-    mainContent.classList.remove("expanded");
-  } else {
-    sidebar.style.display = "none";
-    mainContent.classList.add("expanded");
-  }
+  localStorage.setItem("showSideBar", show);
 }
-
-function toggleTheme() {
-  const isLightTheme = document.body.classList.toggle("light-theme");
-  localStorage.setItem("light-theme", isLightTheme ? "enabled" : "disabled");
-}
-
-function openEditTaskModal(task) {
-  // Set task details in modal inputs
-  // Get button elements from the task modal
-   function styleActiveBoard(boardName) {
-    document.querySelectorAll('.board-btn').forEach(btn => {
-      if (btn.textContent === boardName) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-  }
 
 function toggleTheme() {}
 
