@@ -228,10 +228,6 @@ function setupEventListeners() {
 // Toggles tasks modal
 // Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
-  if (!modal) {
-    console.error("Modal not found");
-    return;
-  }
   modal.style.display = show ? "block" : "none";
 }
 
