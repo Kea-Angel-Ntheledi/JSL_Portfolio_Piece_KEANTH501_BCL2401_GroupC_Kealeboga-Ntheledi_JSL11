@@ -33,6 +33,12 @@ const elements = {
   sideBar: document.querySelector(".side-bar"),
   sideBarBottom: document.querySelector(".side-bar-bottom"),
 
+  headerBoardName: document.getElementById("header-board-name"),
+  dropDownBtn: document.getElementById("dropdownBtn"),
+  createNewTaskBtn: document.getElementById("add-new-task-btn"),
+  deleteBoardBtn: document.getElementById("deleteBoardBtn"),
+  editBoardBtn: document.getElementById("edit-board-btn"),
+  
 
 let activeBoard = "";
 
