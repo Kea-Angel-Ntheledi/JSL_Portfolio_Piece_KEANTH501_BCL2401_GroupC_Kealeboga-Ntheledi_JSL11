@@ -3,6 +3,48 @@
 ## Loom video link:
 https://www.loom.com/share/4db36b85d98b49f8ab98273ef23c2763?sid=506d7a54-cdc9-4d9e-852b-4ba288489c7c
 
+
+## Project overview:
+The project is an Agile board task management system designed to manage tasks across different boards and statuses. Users can add new tasks, edit existing tasks, and move tasks between statuses such as "To Do," "Doing," and "Done." The system features modals for adding and editing tasks, and includes functionality to toggle between light and dark themes.
+
+## Elements included:
+Navigation sidebar,
+Main layout,
+Task columns,
+Modals,
+Theme toggle.
+
+## Areas of mastery:
+### Event Handling: 
+Efficient use of event listeners to manage user interactions, such as opening/closing modals and handling form submissions.
+
+### Data Handling: 
+Storing and retrieving tasks from local storage, with the ability to persist data between sessions.
+
+## Challenges:
+### UI Consistency
+Maintaining a consistent user interface across different interactions, like showing/hiding the sidebar or switching themes.
+
+### DOM manipulation
+Ensuring that changes to the DOM reflect the current state of tasks and are synchronized with data sources like local storage
+
+### Event handeling
+Managing asynchronous events, ensuring they don't interfere with each other, and maintaining the correct order of operations.
+
+## Areas of improvement:
+### Error Handling:
+Providing more robust error handling when interacting with DOM elements, like checking for null references.
+
+### User Feedback: 
+Offering clear feedback to users during task creation, editing, or deletion to confirm their actions.
+
+## Overall learning experience:
+This project offers a comprehensive learning experience, allowing developers to work with key concepts like DOM manipulation, event handling, and data persistence. It helps improve problem-solving skills through challenges like managing UI consistency and maintaining a modular code structure. By addressing areas of improvement, the project can evolve to deliver an even more robust and user-friendly task management system.
+
+
+
+# The project:
+
 Welcome to the Agile Board project, the final project for the JSL course! In this portfolio piece project, you will be stepping into the shoes of a juniour developer tasked with bringing a Kanban Task Management App to life. You're not starting from scratch, though. In this project, you are tasked with tackling the provided user stories to both identify and fix bugs in the code, as well as to develop your own functions to extend the application's capabilities. Key assignments include importing utility functions, initializing data, and diving into debugging tasks such as setting up data correctly in local storage, dynamically displaying boards and tasks, and enhancing user interactions.
 
 Additionally, you will enhance the application by crafting code to meet specific functionalities outlined in the user stories, like managing task details and their lifecycle, toggling theme customization, and ensuring the persistence of data through local storage. This blend of debugging and creative coding invites you to apply your critical thinking and problem-solving skills in a hands-on manner, equipping you for the intricacies of real-world software development scenarios.
