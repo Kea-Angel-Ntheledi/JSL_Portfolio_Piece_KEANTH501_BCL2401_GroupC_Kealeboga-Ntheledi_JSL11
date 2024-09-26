@@ -1,4 +1,5 @@
 ### [JSL11] Agile Board - Kanban Task Management App
+## Project demo: https://agileboard-kanban-task-management-app.netlify.app/
 
 ## Loom video link:
 https://www.loom.com/share/4db36b85d98b49f8ab98273ef23c2763?sid=506d7a54-cdc9-4d9e-852b-4ba288489c7c
